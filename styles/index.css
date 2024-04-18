@@ -2,11 +2,15 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: "Platypi", Helvetica, sans-serif ;
+  font-family: "Platypi", Helvetica, sans-serif;
+}
+
+body {
+	background-color: black;
 }
 
 header {
-	background-color: #333333;
+	background-color: #211533;
 }
 
 section {
@@ -62,8 +66,12 @@ section {
 	position: absolute;
 	z-index: 2;
 	color: white;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
+}
+
+.banner-content-div {
+	margin: 0 50px;
 }
 
 .banner-content h1{
