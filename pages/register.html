@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/register.css">
+
+		<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, aut!</p>
+  <header>
+		<!-- Barra de navegación -->
+		<nav class="navbar">
+			<a href="#"><h2>Título de la página</h2></a>
+			<ul>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#popular">Populares</a></li>
+				<li><a href="#comments">Comentarios</a></li>				
+				<li><a href="./pages/register.html" target="_blank" class="register">Registrate</a></li>
+			</ul>
+	  </nav>
+	</header>
+	<main>
+		<section class="sign_in">
+			<div class="container">
+				<div class="signin-content">
+					<div class="signin-image">
+						<figure>
+							<img src="../static/images/login-img.svg" alt="imagen de inicio de sesión">
+						</figure>						
+					</div>
+					<div class="signin-form">
+						<h2 class="form-title">
+							Sign up
+						</h2>
+						<form method="post" class="register-form" id="login-form">
+							<div class="form-group">
+								<input type="text" name="your-name" id="your-name" placeholder="Nombre de Usuario">
+							</div>
+							<div class="form-group">
+								<input type="password" name="your-pass" id="your-pass" placeholder="Contraseña">
+							</div>
+							<div class="form-group">
+								<input type="checkbox" name="remember-me" id="remember-me" class="agree-term">
+								<label for="remember-me" class="label-agree-term">
+									<span>
+										Recordarme
+									</span>									
+								</label>
+							</div>
+							<div class="form-group form-button">
+								<input type="submit" name="signin" id="singin" value="Entrar" class="form-submit">
+							</div>
+						</form>
+					</div>
+				</div>			
+			</div>
+		</section>
+	</main>
 </body>
 </html>
