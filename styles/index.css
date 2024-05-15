@@ -13,15 +13,24 @@ header {
 	background-color: #1F596B;
 }
 
+main {
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 section {
 	/* Espacio entre una sección y otra */
 	margin-bottom: 50px;
 	/* background color para ver los espacios */
-	background-color: #292828;
+	background-color: #a78a8a;
 }
 
 /* Estilos de la navbar */
 .navbar {
+	width: 100vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,11 +51,12 @@ section {
 
 .navbar ul li{
 	margin: 20px;
-}
-
-.navbar ul li {
 	text-decoration: none;
 	list-style-type: none;
+}
+
+.navbar ul li:last-child {
+	margin-left: 5px;
 }
 
 /* Sección del banner */
@@ -70,7 +80,14 @@ section {
 	align-items: center;
 }
 
+#popular {
+	max-width: 980px;
+}
+
 .banner-content-div {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	margin: 0 50px;
 }
 
@@ -90,6 +107,21 @@ section {
 a{
 	text-decoration: none;
 	color: #f2f2f2;
+}
+
+#comments{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 980px;
+}
+
+.lang-content-div {
+	max-width: 980px;
+	display: flex;
+	flex-direction:row;
+	justify-content: space-around;
 }
 
 
