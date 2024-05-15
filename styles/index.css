@@ -1,4 +1,12 @@
 /*Estilos generales*/
+:root{
+	--Back-color: #3F4045;
+	--Primary-color: #A5D338; 
+	--Cards-lengujes: #E8EBE4;
+	--textos: #f2f2f2;
+	--Cards-info: #545454;
+	--Hover: #474B24;
+}
 body, html {
   margin: 0;
   padding: 0;
@@ -6,11 +14,12 @@ body, html {
 }
 
 body {
-	background-color: black;
+	background-color: var(--Back-color);
 }
 
 header {
-	background-color: #1F596B;
+	background-color: var(--Back-color);
+	border-bottom: 4px solid  var(--Primary-color);
 }
 
 main {
@@ -23,7 +32,7 @@ main {
 
 section {
 	/* Espacio entre una sección y otra */
-	margin-bottom: 50px;
+	margin-bottom: 20rem;
 	/* background color para ver los espacios */
 	background-color: #a78a8a;
 }
@@ -40,7 +49,8 @@ section {
 .navbar a {
 	margin-left: 20px;
 	text-decoration: none;
-	color: white;
+	color: var(--textos);
+	margin: 0 1rem;
 }
 
 .navbar ul {
@@ -70,7 +80,7 @@ section {
 	overflow: hidden;
 	position: relative;
 }
-
+/* definiendo formatos para el div del banner*/
 .banner-content {
 	display: flex;
 	position: absolute;
@@ -80,10 +90,13 @@ section {
 	align-items: center;
 }
 
-#popular {
-	max-width: 980px;
+/* definiendo la primera sección */
+#info {
+	max-width: 80vw;
+	max-height: 100vh;
 }
 
+/* definiendo formatos para el div que engloba las tarjetas de los tipos de programación*/
 .banner-content-div {
 	display: flex;
 	justify-content: space-around;
@@ -91,10 +104,12 @@ section {
 	margin: 0 50px;
 }
 
+/* estilando el dontenido del div banner */
 .banner-content h1{
 	margin-right: 10rem;
 }
 
+/* estilando la etiqueta img (yo la elimine, Nico) */
 .banner img{
 	position: absolute;
 	top: 0;
@@ -104,71 +119,186 @@ section {
 	object-fit: cover;
 }
 
+/* estilando las etiquedas a */
 a{
 	text-decoration: none;
 	color: #f2f2f2;
+	font-size: 1.5rem;
 }
 
-#comments{
+
+/* definiendo la segunda sección */
+#lenguajes{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 980px;
+	max-width: 80vw;
 }
 
+/* estilando el div de la segunda sección*/
 .lang-content-div {
-	max-width: 980px;
+	max-width: 100vw;
+	max-height: 100vh;
 	display: flex;
 	flex-direction:row;
 	justify-content: space-around;
 }
 
 
-.register{
+/* estilando el boton de inicio de sesion de la navbar y register del banner */
+.btn-register{
 	display: block;
-	width: 6rem;
-	height: 2rem;
-	background-color:#1B4B5A;
+	width: 15rem;
+	height: 3rem;
+	background-color:var(--Primary-color);
 	border-radius: 4rem;
 	align-content: center;
 	text-align: center;
 	
-}
-
-.register:hover{
-	background-color: #38a9cc;
-}
-
-h1{
-	color: #f2f2f2;
-}
-
-.banner-content-div{
-	display: flex;
-}
-
-.lang-content-div{
-	display: flex;
 	
 }
 
-.div-card{
-	margin-left: 10px;
-	background-color: #38a9cc;
-	width: 20rem;
+/* estilando el hover del boton register del banner*/
+.btn-register:hover:hover{
+	background-color: var(--Hover);
+}
+
+/* estilando las etiquetas h1 */
+h1{
+	color: #f2f2f2;
+	text-shadow: 0 3px 0 #8C8C86;
+	font-size: 3rem;
+	text-align: center;
+	
+}
+
+/* estilando las etiquetas b */
+b{
+	color: var(--Primary-color);
+}
+
+/* estilando las etiquetas h2 */
+h2{
+	text-shadow: 0 3px 0 #8C8C86;
+	
+}
+
+/* estilando las etiquetas h3 */
+h3{
+	text-shadow: 0 3px 0 #8C8C86;
+}
+
+
+
+
+/* definiendo formatos para el div que engloba las tarjetas de los lenguajes */
+.lang-content-div{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 6rem;
+	
+}
+
+/* definiendo estilos y valores para las tarjetas de los tipos de programación */
+.div-card-info{
+	margin-left:10px;
+	background-color: var(--Cards-info);
+	width: 25rem;
 	height: 20rem;
 	display: flex;
 	flex-direction: column;
 	border-radius: 3rem;
+	border: 3px solid var(--Primary-color);
+
+}
+/* definiendo estilos y valores para el texto y título de ver más de las tajetas */
+.div-card-info p{
+	margin-left: 10px;
+	padding: 2px;
+	color: var(--textos);
+}
+
+.div-card-info  h2{
+	margin-left: 10px;
+	text-align: center;
+	font-size: 2rem;
+	color: var(--textos);
+}
+
+/* definiendo estilos y valores para las tarjetas de los lenguajes */
+.div-card{
+	margin-left: 10px;
+	background-color: var(--Cards-lengujes);
+	width: 20rem;
+	height: 24rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 3rem;
+	border: 3px solid black;
+	
 
 }
 
+/* definiendo estilos y valores para el texto, título y boton de ver más de las tajetas */
 .div-card  p{
 	margin-left: 10px;
+	padding: 5px;
+	color: var(--Cards-info);
+	
 }
-.div-card  h2{
+.div-card  h2, .div-card>h2{
+	text-align: center;
 	margin-left: 10px;
+	font-size: 2rem;
+	color: var(--Cards-info);
+}
+
+.turorial {
+	color: var(--textos);
+	display: block;
+	background-color: var(--Primary-color);
+	width: 8rem;
+	height: 3rem;
+	border-radius: 4rem;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	margin-left: 1rem;
+	font-size: 1.5rem;
+}
+
+/* seccion sobre nosotros */
+#Sobre-nosotros{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 100vw;
+}
+
+/* definiendo valores del contenedor de las tarjetas del div sobre nosotros */
+.nosotros-text{
+	max-width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(2,2fr);
+	gap: 8rem;
+}
+
+/* definiendo estilos para las tarjetas del sobre nosotros */
+.texto{
+	background-color: var(--Cards-lengujes);
+	max-width: 40rem;
+	border: 3px solid black;
+	border-radius: 4rem;
+}
+
+/* definiendo valores del texto de las tarjetas del sobre nosotros */
+.texto p , .texto>p{
+	align-items: center;
+	padding: 2rem;
+	font-size: 1.5rem;
+	color: var(--Cards-info);
 }
 
 /* Estilos del footer */
@@ -178,6 +308,8 @@ h1{
 	justify-content:center;
 	align-items: center;
 	margin-bottom: 0;
+	background-color: var(--Primary-color);
+	height: 8rem;
 }
 
 .footer a {
