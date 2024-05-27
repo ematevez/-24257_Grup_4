@@ -28,6 +28,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 section {
@@ -43,6 +44,7 @@ section {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: no-wrap;
 	height: 6vh;
 }
 
@@ -132,9 +134,12 @@ a{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	align-items: center;
 	max-width: 80vw;
 }
+
+
 
 /* estilando el div de la segunda sección*/
 .lang-content-div {
