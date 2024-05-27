@@ -7,7 +7,8 @@ Este trabajo práctico es parte del curso ofrecido por Codo a Codo. El objetivo 
 ### Creadores
 
 1. **Emanuel Tevez**
-   ![Emanuel Tevez](https://github.com/ematevez.png)
+   ![Emanuel Teves](https://github.com/ematevez.png){: width=30px height=30px style="border-radius: 50%;"}
+
    [LinkedIn](https://www.linkedin.com/in/emanuel-juli%C3%A1n-tevez)
 
 2. **Segundo Creador**
