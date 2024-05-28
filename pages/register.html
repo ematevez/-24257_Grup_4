@@ -3,65 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../styles/register.css">
-	<link rel="icon" href="../static/images/favicon-16x16.png">
+  <link rel="stylesheet" href="../styles/register.css">
+  <link rel="icon" href="../static/images/favicon-16x16.png">
 
-		<!-- Google fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-    <title>Registrate Gratis</title>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+  <title>Registrate Gratis</title>
+
+  <style>
+    /* Media queries */
+    @media only screen and (max-width: 768px) {
+      /* Ajusta estilos para pantallas más pequeñas */
+    }
+
+    /* Otras reglas de medios si es necesario */
+
+  </style>
 </head>
 <body>
   <header>
-		<!-- Barra de navegación -->
-		<nav class="navbar">
-			<a href="../index.html"><h2>Cod34nd0</h2></a>
-			<ul>
-				<li><a href="../index.html">Inicio</a></li>
-				<li><a href="../index.html#lenguajes">Populares</a></li>
-				<li><a href="../index.html#comentarios">Comentarios</a></li>				
-				<li><a href="./pages/register.html" target="_blank" class="register">Registrate</a></li>
-			</ul>
-	  </nav>
-	</header>
-	<main>
-		<section class="sign_in">
-			<div class="container">
-				<div class="signin-content">
-					<div class="signin-image">
-						<figure>
-							<img src="../static/images/login-img.svg" alt="imagen de inicio de sesión">
-						</figure>						
-					</div>
-					<div class="signin-form">
-						<h2 class="form-title">
-							Registrate
-						</h2>
-						<form method="post" class="register-form" id="login-form">
-							<div class="form-group">
-								<input type="text" name="your-name" id="your-name" placeholder="Nombre de Usuario">
-							</div>
-							<div class="form-group">
-								<input type="password" name="your-pass" id="your-pass" placeholder="Contraseña">
-							</div>
-							<div class="form-group" id="checkbox">
-								
-								<label for="remember-me" class="label-agree-term">
-									<input type="checkbox" name="remember-me" id="remember-me" class="agree-term">
-									<span class="texto-checkbox">
-										Recordarme
-									</span>									
-								</label>
-							</div>
-							<div class="form-group form-button">
-								<input type="submit" name="signin" id="singin" value="Entrar" class="form-submit">
-							</div>
-						</form>
-					</div>
-				</div>			
-			</div>
-		</section>
-	</main>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+      <a href="../index.html"><h2>Cod34nd0</h2></a>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#lenguajes">Populares</a></li>
+        <li><a href="../index.html#comentarios">Comentarios</a></li>        
+        <li><a href="./pages/register.html" target="_blank" class="register">Registrate</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="sign_in">
+      <div class="container">
+        <div class="signin-content">
+          <div class="signin-image">
+            <figure>
+              <img src="../static/images/login-img.svg" alt="imagen de inicio de sesión">
+            </figure>            
+          </div>
+          <div class="signin-form">
+            <h2 class="form-title">
+              Registrate
+            </h2>
+            <form method="post" class="register-form" id="login-form" onsubmit="return validateForm()">
+              <div class="form-group">
+                <input type="text" name="your-name" id="your-name" placeholder="Nombre de Usuario">
+              </div>
+              <div class="form-group">
+                <input type="password" name="your-pass" id="your-pass" placeholder="Contraseña">
+              </div>
+              <div class="form-group" id="checkbox">
+                <label for="remember-me" class="label-agree-term">
+                  <input type="checkbox" name="remember-me" id="remember-me" class="agree-term">
+                  <span class="texto-checkbox">
+                    Recordarme
+                  </span>                  
+                </label>
+              </div>
+              <div class="form-group form-button">
+                <input type="submit" name="signin" id="singin" value="Entrar" class="form-submit">
+              </div>
+            </form>
+          </div>
+        </div>      
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("your-name").value;
+      var pass = document.getElementById("your-pass").value;
+      
+      if (name == "" || pass == "") {
+        alert("Por favor, complete todos los campos.");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </body>
 </html>
