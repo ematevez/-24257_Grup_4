@@ -1,0 +1,48 @@
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas */
+  .navbar h2 {
+    font-size: 24px;
+  }
+
+  .banner-content h1 {
+    font-size: 24px;
+  }
+
+  .btn-register {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  #info h1 {
+    font-size: 24px;
+  }
+
+  .div-card-info h2, .div-card-info p {
+    font-size: 16px;
+  }
+
+  #lenguajes h1 {
+    font-size: 24px;
+  }
+
+  .div-card h2, .div-card p, .div-card a {
+    font-size: 14px;
+  }
+
+  #Sobre-nosotros h1 {
+    font-size: 24px;
+  }
+
+  .nosotros-text p {
+    font-size: 14px;
+  }
+
+  #comentarios h1 {
+    font-size: 24px;
+  }
+
+  #comentarios input[type="text"] {
+    width: calc(100% - 20px);
+  }
+}
